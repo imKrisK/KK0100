@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import KrisK from './KrisK.jpeg';
+import KrisK from './KrisK.JPEG';
 import './KristofferProfile.css';
 
 const sections = [
