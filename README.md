@@ -3,13 +3,13 @@
 
 This is a Vite + React project.
 
+
 ## Project Structure
 
 - `src/` - Source code for the React app
-	- `App.jsx` - Main application component
-	- `KristofferProfile.jsx` - Profile component
-	- `assets/` - Static assets (e.g., images, SVGs)
-- `public/` - Public assets served directly
+  - `App.jsx` - Main application component
+  - `KristofferProfile.jsx` - Profile component
+- `public/` - Public assets served directly (e.g., profile images like `KrisK.JPEG`)
 - `index.html` - Main HTML file
 - `vite.config.js` - Vite configuration
 - `eslint.config.js` - ESLint configuration
@@ -42,7 +42,8 @@ npm run preview
 
 ## Customization
 - Update `src/App.jsx` and `src/KristofferProfile.jsx` to modify the main UI.
-- Add assets to `src/assets/` or `public/` as needed.
+- Place images (such as profile photos) in the `public/` folder and reference them with `/imagename.ext` in your components.
+- Add other assets to `src/assets/` for imports or to `public/` for direct serving.
 
 ## License
 MIT
