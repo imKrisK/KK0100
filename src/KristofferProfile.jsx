@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import KrisK from './KrisK.JPEG';
+
 import './KristofferProfile.css';
 
 const sections = [
@@ -39,7 +39,7 @@ export default function KristofferProfile() {
   return (
     <div className="profile-bg">
       <div className="profile-container">
-        <img src={KrisK} alt="Kristoffer Kelly" className="profile-photo" />
+  <img src="/KrisK.JPEG" alt="Kristoffer Kelly" className="profile-photo" />
         <h1>Kristoffer Kelly</h1>
         <p className="profile-meta">Location: Las Vegas | Years with RDSolutions: 9 months</p>
         <div className="profile-sections">
