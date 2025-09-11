@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #e0f7fa 0%, #c8e6c9 50%, #fffde7 100%);
-  background-attachment: fixed;
+  
+  background-attachment: centered;
 }
 .profile-container {
   max-width: 600px;
@@ -65,10 +65,10 @@
   border-radius: 0 0 10px 10px;
   font-size: 1.01rem;
   color: #333;
-  animation: fadeIn 0.3s;
+  /* animation: fadeIn 0.3s; */
   text-align: left;
 }
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; /* transform: translateY(-8px); */ }
+  to { opacity: 1; /* transform: translateY(0); */ }
 }
