@@ -33,33 +33,45 @@ const sections = [
   }
 ];
 
+
+function ProfileSection({ section, isOpen, onClick }) {
+  return (
+    <div className="profile-section">
+      <button
+        className="section-title"
+        onClick={onClick}
+        aria-expanded={isOpen}
+      >
+        {section.title}
+      </button>
+      {isOpen && (
+        <div className="section-content">
+          {section.content.split('\n').map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function KristofferProfile() {
   const [openSection, setOpenSection] = useState(null);
 
   return (
     <div className="profile-bg">
       <div className="profile-container">
-  <img src="/KrisK.JPEG" alt="Kristoffer Kelly" className="profile-photo" />
+        <img src="/KrisK.JPEG" alt="Kristoffer Kelly" className="profile-photo" />
         <h1>Kristoffer Kelly</h1>
         <p className="profile-meta">Location: Las Vegas | Years with RDSolutions: 9 months</p>
         <div className="profile-sections">
           {sections.map((section, idx) => (
-            <div key={section.title} className="profile-section">
-              <button
-                className="section-title"
-                onClick={() => setOpenSection(openSection === idx ? null : idx)}
-                aria-expanded={openSection === idx}
-              >
-                {section.title}
-              </button>
-              {openSection === idx && (
-                <div className="section-content">
-                  {section.content.split('\n').map((line, i) => (
-                    <p key={i}>{line}</p>
-                  ))}
-                </div>
-              )}
-            </div>
+            <ProfileSection
+              key={section.title}
+              section={section}
+              isOpen={openSection === idx}
+              onClick={() => setOpenSection(openSection === idx ? null : idx)}
+            />
           ))}
         </div>
       </div>
